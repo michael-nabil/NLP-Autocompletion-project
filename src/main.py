@@ -396,8 +396,8 @@ class ArabicAutocompleteGUI:
 # Main Application
 def main():
     # Path to specific file - UPDATE THIS TO YOUR ACTUAL PATH
-    data_file = r"project\All Data\All Data"   # Path to the dataset file
-    model_path = r"project\arabic_ngram_model_full.pkl"  # Path to save/load the model
+    data_file = r".\data\all_data"   # Path to the dataset file
+    model_path = r".\model\arabic_ngram_model_full.pkl"  # Path to save/load the model
     
     # Create instances
     preprocessor = ArabicPreprocessor()
