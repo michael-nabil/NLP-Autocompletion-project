@@ -40,11 +40,20 @@ The Arabic Autocomplete System uses a **`Statistical`** machine learning-based l
 - Validation Method: A held-out validation set (20% of the dataset) is used to test accuracy and prediction quality.
 - Metrics: Perplexity and prediction accuracy are used to evaluate the model’s performance.
 
+## 5. Evaluation Metrics
+The model is evaluated using Perplexity and Accuracy:
+- `Perplexity`: A measure of how well the model predicts the next word
+- `Top-k Accuracy`: Accuracy of predicting the correct word within the top k suggestions (e.g., top-1, top-3, top-5)
 
-## 5. The Trained Model file can be downloaded from Hugging Face either:
-### a) Manually from this link: [Arabic Auto Completion Model](https://huggingface.co/michaelHenry1/Ngrams_Arabic_AutoCompletion/blob/main/arabic_ngram_model_full.pkl)
+## 6. Model Limitations
+- Limited to the vocabulary seen during training; out-of-vocabulary words are not handled well.
+- Accuracy may decrease for informal or dialectal Arabic.
+- Requires significant computational resources for training on large datasets.
+
+## 7. The Trained Model file can be downloaded from Hugging Face either:
+### 7.a) Manually from this link: [Arabic Auto Completion Model](https://huggingface.co/michaelHenry1/Ngrams_Arabic_AutoCompletion/blob/main/arabic_ngram_model_full.pkl)
  - ### OR
-### b) Using the `huggingface_hub` library:
+### 7.b) Using the `huggingface_hub` library:
 ```python
 from huggingface_hub import hf_hub_download
 import pickle
